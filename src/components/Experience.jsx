@@ -35,6 +35,22 @@ export default function Experience() {
             </p>
             <span className="cgpa">CGPA 7.98</span>
           </div>
+          <div className="education-card">
+            <h3>Paras Vidya Vihar, Sagar</h3>
+            <p>
+              Class 12<br />
+              2022 &mdash; 2023
+            </p>
+            <span className="cgpa">87%</span>
+          </div>
+          <div className="education-card">
+            <h3>Paras Vidya Vihar, Sagar</h3>
+            <p>
+              Class 10<br />
+              2021 &mdash; 2022
+            </p>
+            <span className="cgpa">84.2%</span>
+          </div>
         </Reveal>
       </div>
     </section>
