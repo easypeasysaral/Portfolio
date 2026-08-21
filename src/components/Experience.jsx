@@ -14,6 +14,12 @@ export default function Experience() {
               <div>
                 <h3>Backend & 6G Research Intern</h3>
                 <p>HNNOIX India Pvt Ltd &middot; Gurugram</p>
+                <ul style={{ color: 'var(--muted)', font: '11px/1.5 var(--app-font-mono)', margin: '15px 0 0 0', paddingLeft: '16px', listStyleType: 'disc' }}>
+                  <li style={{ marginBottom: '8px' }}>Developing backend services and data-processing pipelines for telecom research projects involving 5G and emerging 6G technologies.</li>
+                  <li style={{ marginBottom: '8px' }}>Working with ASN.1 message structures, protocol logs, and network datasets for parsing, analysis, and visualization.</li>
+                  <li style={{ marginBottom: '8px' }}>Building FastAPI backend components and React interfaces for telecom monitoring and analysis tools.</li>
+                  <li>Collaborating with researchers on AI-assisted workflows and proof-of-concept applications for next-generation communication systems.</li>
+                </ul>
               </div>
               <div className="timeline-date">
                 Jul 2026 &mdash;<br />Present
