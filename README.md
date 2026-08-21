@@ -1,6 +1,9 @@
-# Saral Jain — Portfolio (React + Vite + Tailwind)
 
-## Run locally
+# Saral Jain - AI/ML Engineer Portfolio
+
+A minimalist, brutalist-style personal portfolio built with React and Vite.
+
+## Run Locally
 
 ```bash
 npm install
@@ -9,49 +12,39 @@ npm run dev
 
 Then open the printed local URL (usually http://localhost:5173).
 
-## Build for production
+## Build for Production
 
 ```bash
 npm run build
 npm run preview   # optional, serves the dist/ build locally
 ```
 
-The build output lands in `dist/` — deploy that folder to Netlify, Vercel, GitHub Pages, etc.
+The build output lands in `dist/`. You can deploy this folder directly to Netlify, Vercel, or GitHub Pages.
 
-## Structure
+## Architecture
 
-```
+The codebase has been refactored to be extremely lean. It relies on standard CSS rather than PostCSS or Tailwind to guarantee maximum performance and match the desired brutalist aesthetic.
+
+```text
 src/
-  data.js              content: skills, projects, experience, education, stats
-  useTheme.js           dark/light theme hook (toggles [data-theme] on <html>)
-  index.css             Tailwind directives + CSS variable design tokens
-  App.jsx                assembles all sections
+  data.js              # Centralized content: projects, skills, signals
+  index.css            # Compiled brutalist design tokens and CSS rules
+  App.jsx              # Main layout assembling all sections
   components/
-    Navbar.jsx
-    Hero.jsx
-    About.jsx
-    Skills.jsx
-    Projects.jsx        filterable, expandable project cards
-    Timeline.jsx         Experience / Education tabs
-    Heatmap.jsx           shared seeded activity heatmap w/ tooltip
-    Activity.jsx          GitHub / LeetCode toggle wrapping Heatmap
-    Contact.jsx
-    Footer.jsx
+    Navbar.jsx         # Top navigation with mobile menu
+    Reveal.jsx         # Scroll-triggered animation wrapper using IntersectionObserver
+    Hero.jsx           # Landing section with terminal UI
+    Band.jsx           # Scrolling marquee
+    About.jsx          # Short bio section
+    Projects.jsx       # Selected work showcase
+    Experience.jsx     # Current roles and education
+    Skills.jsx         # Tooling categorized by domain
+    Signals.jsx        # Hackathons, simulation, and extra-curriculars
+    Contact.jsx        # Contact info and external links
 ```
 
-## Notes
+## Making Edits
 
-- The GitHub and LeetCode activity heatmaps now pull **live data**, fetched client-side on mount:
-  - GitHub: [`github-contributions-api.jogruber.de`](https://github.com/grubersjoe/github-contributions-api) —
-    a free, CORS-enabled, no-auth API that scrapes the public contribution graph.
-  - LeetCode: [`leetcode-stats.tashif.codes`](https://github.com/tashifkhan/LeetCode-Stats-API) — a free
-    hosted API exposing solved counts and a `/heatmap` endpoint with daily submission counts, streaks, etc.
-  - Both are third-party community projects, not official APIs — if either goes down or rate-limits you,
-    the section shows an inline error instead of silently falling back to fake data.
-- **Update `src/config.js` before shipping**: `GITHUB_USERNAME` is set to `easypeasysaral` (from your
-  resume). `LEETCODE_USERNAME` is currently a guess (set to the same handle) — replace it with your
-  actual LeetCode username or the heatmap will either 404 or show someone else's stats.
-- All content (name, projects, experience) lives in `src/data.js` — edit that file to update copy
-  without touching component markup.
-- Theming is done via CSS custom properties on `:root` / `[data-theme='light']` in `src/index.css`,
-  referenced from Tailwind using arbitrary values like `bg-[var(--panel)]`.
+- **Content**: All text for your projects, skills, and signals lives in `src/data.js`. Edit this file to update the copy across the site without touching the React components.
+- **Animations**: Any new sections you add should use the `<Reveal>` component wrapper to hook into the global scroll animation system.
+
