@@ -1,68 +1,90 @@
+
+import React from "react";
+import Reveal from "./Reveal";
+import { ArrowRight, Download } from "lucide-react";
+
 export default function Hero() {
   return (
-    <header className="pt-[150px] pb-[90px]">
-      <div className="max-w-[1120px] mx-auto px-6 grid md:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+    <section id="top" className="hero">
+      <div className="wrap hero-grid">
         <div>
-          <div className="font-mono text-[12.5px] tracking-[0.14em] uppercase text-[var(--accent)] flex items-center gap-2.5 mb-3.5">
-            <span className="w-[18px] h-px bg-[var(--accent)]" />
-            final-year b.tech · ai &amp; ml
-          </div>
-          <h1 className="font-mono text-[32px] md:text-[44px] leading-[1.12] font-bold -tracking-[0.01em]">
-            Building models &amp; shipping
-            <br />
-            them like <span className="text-[var(--accent)]">production software</span>
-            <span className="cursor-blink" />
-          </h1>
-          <div className="font-mono text-[16px] text-[var(--text-dim)] mt-4">
-            AI/ML Engineer &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; Sagar, India
-          </div>
-          <p className="mt-5 text-[16px] leading-[1.7] text-[var(--text-dim)] max-w-[52ch]">
-            I take a model from a messy dataset to a deployed, explainable API — feature engineering, evaluation, and
-            a real FastAPI + React interface around it. Currently researching AI in 6G telecom systems.
-          </p>
-          <div className="flex gap-3.5 mt-8 flex-wrap">
-            <a
-              href="#projects"
-              className="font-mono text-[13px] px-5 py-3 rounded-[9px] no-underline inline-flex items-center gap-2 border border-[var(--accent)] bg-[var(--accent)] text-[#0a0c11] font-semibold hover:bg-[var(--accent-strong)] hover:-translate-y-px transition-all"
-            >
-              View projects →
-            </a>
-            <a
-              href="mailto:tsaraljain@gmail.com"
-              className="font-mono text-[13px] px-5 py-3 rounded-[9px] no-underline inline-flex items-center gap-2 border border-[var(--border-strong)] text-[var(--text)] hover:border-[var(--accent)] hover:text-[var(--accent)] transition-all"
-            >
-              Get in touch
-            </a>
-          </div>
+          <Reveal>
+            <div className="eyebrow availability">
+              <span />Available for engineering conversations
+            </div>
+            <h1 className="hero-title">
+              I build the bridge<br />from <em>model</em> to<br />momentum.
+            </h1>
+            <p className="hero-copy">
+              Saral Jain is an AI/ML Engineer in the making, working across machine learning, generative AI, backend systems, and the research edge of 5G/6G.
+            </p>
+            <div className="hero-actions">
+              <a href="#work" className="button-primary" data-testid="link-hero-work">
+                See selected work <ArrowRight size={16} />
+              </a>
+              <button className="button-quiet" onClick={() => window.print()} data-testid="button-print-resume">
+                <Download size={15} /> Print / save resume
+              </button>
+            </div>
+            {/* <div className="hero-meta" aria-label="Key facts">
+              <div className="meta-item">
+                <strong>7.98</strong>
+                <span>CGPA &middot; MITS Gwalior</span>
+              </div>
+              <div className="meta-item">
+                <strong>2027</strong>
+                <span>Graduating &middot; B.Tech CSE</span>
+              </div>
+              <div className="meta-item">
+                <strong>0.95</strong>
+                <span>ROC-AUC &middot; XGBoost</span>
+              </div>
+            </div> */}
+          </Reveal>
         </div>
-
-        <div className="rounded-[14px] border border-[var(--border)] bg-[var(--panel)] shadow-[var(--shadow)] overflow-hidden">
-          <div className="flex items-center gap-2 px-4 py-3 border-b border-[var(--border)] font-mono text-xs text-[var(--text-faint)] bg-[var(--panel-2)]">
-            <span className="w-[9px] h-[9px] rounded-full bg-[var(--danger)]" />
-            <span className="w-[9px] h-[9px] rounded-full bg-[var(--accent-2)]" />
-            <span className="w-[9px] h-[9px] rounded-full bg-[var(--accent)]" />
-            &nbsp;&nbsp;profile.yaml
-          </div>
-          <div className="px-[22px] py-5 font-mono text-[13.2px] leading-[2]">
-            <div><span className="text-[var(--text-faint)]">name:</span> Saral Jain</div>
-            <div><span className="text-[var(--text-faint)]">role:</span> AI/ML Engineer, Full-Stack Dev</div>
-            <div>
-              <span className="text-[var(--text-faint)]">status:</span>{' '}
-              <span className="inline-flex items-center gap-1.5 text-[11.5px] px-2.5 py-0.5 rounded-full bg-[color-mix(in_srgb,var(--accent)_16%,transparent)] text-[var(--accent)] border border-[color-mix(in_srgb,var(--accent)_40%,transparent)]">
-                <span className="status-pulse" /> open to internships
+        <Reveal delay="reveal-delay-2" className="terminal-wrap">
+          <div className="terminal" aria-label="Saral Jain engineering profile">
+            <div className="terminal-bar">
+              <span>saral@portfolio:~ / profile.json</span>
+              <span className="terminal-dots">
+                <i />
+                <i />
+                <i />
               </span>
             </div>
-            <div><span className="text-[var(--text-faint)]">location:</span> Sagar, Madhya Pradesh, IN</div>
-            <div><span className="text-[var(--text-faint)]">education:</span> B.Tech CS (AI &amp; ML), MITS Gwalior</div>
-            <div><span className="text-[var(--text-faint)]">cgpa:</span> <span className="text-[var(--accent-2)]">7.94</span></div>
-            <div>
-              <span className="text-[var(--text-faint)]">stack:</span>{' '}
-              <span className="text-[var(--accent)]">[Python, FastAPI, React, PyTorch, XGBoost]</span>
+            <div className="terminal-body">
+              <span className="terminal-line">
+                <span className="prompt">01</span> <span className="key">const</span> <span className="value">engineer = {"{"}</span>
+              </span>
+              <span className="terminal-line indent">
+                <span className="key">focus</span>: <span className="value">&apos;AI / ML&apos;</span>,
+              </span>
+              <span className="terminal-line indent">
+                <span className="key">ships</span>: <span className="value">[&apos;APIs&apos;, &apos;RAG&apos;, &apos;models&apos;]</span>,
+              </span>
+              <span className="terminal-line indent">
+                <span className="key">research</span>: <span className="value">&apos;5G &rarr; 6G&apos;</span>,
+              </span>
+              <span className="terminal-line indent">
+                <span className="key">base</span>: <span className="value">&apos;Bhopal, IN&apos;</span>,
+              </span>
+              <span className="terminal-line indent">
+                <span className="key">status</span>: <span className="value">&apos;learning in public&apos;</span>
+              </span>
+              <span className="terminal-line">
+                <span className="value">{"}"}</span>
+              </span>
+              <br />
+              <span className="terminal-line">
+                <span className="prompt">&rarr;</span> <span className="value">python deploy_idea.py</span>
+                <span className="terminal-cursor" />
+              </span>
             </div>
-            <div><span className="text-[var(--text-faint)]">current:</span> 6G Research &amp; Innovation Intern @ HNNOIX</div>
           </div>
-        </div>
+        </Reveal>
       </div>
-    </header>
-  )
+      <div className="scroll-cue">Scroll to explore</div>
+    </section>
+  );
 }
+
