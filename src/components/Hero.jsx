@@ -10,7 +10,7 @@ export default function Hero() {
         <div>
           <Reveal>
             <div className="eyebrow availability">
-              <span />Available for engineering conversations
+              <span />Looking for Internship and Full-Time roles
             </div>
             <h1 className="hero-title">
               I build the bridge<br />from <em>model</em> to<br />momentum.

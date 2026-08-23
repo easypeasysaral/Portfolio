@@ -31,7 +31,7 @@ export default function Projects() {
                     {p.tags.map(t => <span key={t} className="project-tag">{t}</span>)}
                   </div>
                 </div>
-                <div>
+                <div className="project-meta">
                   <div className="mono" style={{ fontSize: 11, color: "#68764b", textAlign: "right", marginBottom: 18 }}>
                     {p.proof}
                   </div>
