@@ -10,7 +10,7 @@ export const projects = [
   },
   {
     index: "02",
-    name: "Multilingual Meeting Intelligence Assistant",
+    name: "SynapseAI Video and Meeting Assistant",
     description: "An assistant for English, Hindi, and Hinglish meetings: transcribe, retrieve context, ask questions, and export a useful artifact as PDF or TXT.",
     tags: ["Whisper", "Sarvam AI", "ChromaDB", "LangChain", "Mistral AI"],
     proof: "English / Hindi / Hinglish",
