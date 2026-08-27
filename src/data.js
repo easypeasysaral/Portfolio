@@ -14,7 +14,7 @@ export const projects = [
     description: "An assistant for English, Hindi, and Hinglish meetings: transcribe, retrieve context, ask questions, and export a useful artifact as PDF or TXT.",
     tags: ["Whisper", "Sarvam AI", "ChromaDB", "LangChain", "Mistral AI"],
     proof: "English / Hindi / Hinglish",
-    repo: "https://github.com/easypeasysaral/Multilingual-Meeting-Intelligence-Assistant"
+    repo: "https://github.com/easypeasysaral/AI_Video_Assitant"
   },
   {
     index: "03",
