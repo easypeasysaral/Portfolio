@@ -62,9 +62,9 @@ export default function Hero() {
               <span className="terminal-line indent">
                 <span className="key">ships</span>: <span className="value">[&apos;APIs&apos;, &apos;RAG&apos;, &apos;models&apos;]</span>,
               </span>
-              <span className="terminal-line indent">
+              {/* <span className="terminal-line indent">
                 <span className="key">research</span>: <span className="value">&apos;5G &rarr; 6G&apos;</span>,
-              </span>
+              </span> */}
               <span className="terminal-line indent">
                 <span className="key">base</span>: <span className="value">&apos;Bhopal, IN&apos;</span>,
               </span>
