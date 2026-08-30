@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     index: "03",
-    name: "Deep Latent Space & Ensemble Network Defense",
+    name: "Hyperion IDS -- Deep Latent Space & Ensemble Network Defense",
     description: "A network traffic classification system focused on the full ML loop: feature engineering, supervised model evaluation, and a usable serving layer.",
     tags: ["Scikit-Learn", "FastAPI", "React", "Network security"],
     proof: "Traffic classification",
