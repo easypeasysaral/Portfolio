@@ -21,9 +21,15 @@ export default function Hero() {
               <a href="#work" className="button-primary" data-testid="link-hero-work">
                 See selected work <ArrowRight size={16} />
               </a>
-              <button className="button-quiet" onClick={() => window.print()} data-testid="button-print-resume">
-                <Download size={15} /> Print / save resume
-              </button>
+              <a
+                href="https://drive.google.com/file/d/1UUJTwMLjbn4_VuyVDHpilHblCJa_VgcH/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-quiet"
+                data-testid="link-resume"
+              >
+                <Download size={15} /> Save resume
+              </a>
             </div>
             {/* <div className="hero-meta" aria-label="Key facts">
               <div className="meta-item">
