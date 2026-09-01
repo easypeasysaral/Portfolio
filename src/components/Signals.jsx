@@ -7,7 +7,7 @@ export default function Signals() {
   return (
     <section className="section section-dark">
       <div className="wrap">
-        <Reveal className="section-head">
+        <Reveal direction="up" className="section-head">
           <div>
             <div className="eyebrow">Signals beyond the repo</div>
             <h2 className="section-title">Stay<br />in motion.</h2>
@@ -16,14 +16,19 @@ export default function Signals() {
             The habits behind the work matter too: practice, pressure, teamwork, and a willingness to keep showing up.
           </p>
         </Reveal>
-        <div className="timeline">
+        <div className="timeline animated-timeline">
           {signals.map(([title, desc], i) => (
-            <Reveal key={title} delay={i % 2 !== 0 ? "reveal-delay-1" : ""} className="timeline-item">
+            <Reveal
+              key={title}
+              delay={`reveal-delay-${(i % 3) + 1}`}
+              direction="up"
+              className="timeline-item interactive-signal-item"
+            >
               <div>
-                <h3>{title}</h3>
+                <h3 className="signal-title">{title}</h3>
                 <p>{desc}</p>
               </div>
-              <div className="timeline-date">0{i + 1}</div>
+              <div className="timeline-date signal-number">0{i + 1}</div>
             </Reveal>
           ))}
         </div>
@@ -31,4 +36,5 @@ export default function Signals() {
     </section>
   );
 }
+
 

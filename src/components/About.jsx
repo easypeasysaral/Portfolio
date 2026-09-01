@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section id="about" className="section">
       <div className="wrap">
-        <Reveal className="section-head">
+        <Reveal direction="up" className="section-head">
           <div>
             <div className="eyebrow">The short version</div>
             <h2 className="section-title">
@@ -18,10 +18,10 @@ export default function About() {
           </p>
         </Reveal>
         <div className="about-layout">
-          <Reveal className="about-note" delay="reveal-delay-1">
+          <Reveal direction="right" className="about-note" delay="reveal-delay-1">
             Good engineering makes complex things feel obvious on the other side.
           </Reveal>
-          <Reveal className="about-body" delay="reveal-delay-2">
+          <Reveal direction="left" className="about-body" delay="reveal-delay-2">
             <p>
               <strong>I work across the stack.</strong> My projects move from noisy data and model selection to APIs, interfaces, retrieval, and deployment-shaped thinking.
             </p>
@@ -29,9 +29,9 @@ export default function About() {
               Right now, I am studying Computer Science with a focus on AI & ML at MITS Gwalior, while exploring how intelligent systems can be both rigorous and genuinely useful.
             </p>
             <div className="about-foot">
-              <span className="pill">Bhopal, India</span>
-              <span className="pill">B.Tech CSE &middot; AI & ML</span>
-              <span className="pill">Open to Internships</span>
+              <span className="pill interactive-pill">Bhopal, India</span>
+              <span className="pill interactive-pill">B.Tech CSE &middot; AI & ML</span>
+              <span className="pill interactive-pill highlight-pill">Open to Internships</span>
             </div>
           </Reveal>
         </div>
@@ -39,4 +39,5 @@ export default function About() {
     </section>
   );
 }
+
 

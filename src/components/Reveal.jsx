@@ -1,7 +1,13 @@
 
 import React, { useRef, useState, useEffect } from "react";
 
-export default function Reveal({ children, className = "", delay = "" }) {
+export default function Reveal({
+  children,
+  className = "",
+  delay = "",
+  direction = "up", // 'up' | 'down' | 'left' | 'right' | 'zoom'
+  threshold = 0.12
+}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -13,13 +19,19 @@ export default function Reveal({ children, className = "", delay = "" }) {
         setIsVisible(true);
         observer.disconnect();
       }
-    }, { threshold: 0.12 });
+    }, { threshold });
+
     observer.observe(el);
     return () => observer.disconnect();
-  }, []);
+  }, [threshold]);
+
+  const directionClass = direction ? `reveal-${direction}` : "reveal-up";
 
   return (
-    <div ref={ref} className={`reveal ${isVisible ? "is-visible" : ""} ${delay} ${className}`}>
+    <div
+      ref={ref}
+      className={`reveal ${directionClass} ${isVisible ? "is-visible" : ""} ${delay} ${className}`}
+    >
       {children}
     </div>
   );

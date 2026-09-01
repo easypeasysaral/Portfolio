@@ -1,9 +1,24 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
 export default function Navbar({ activeSection }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const totalScroll = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalScroll > 0) {
+        const currentProgress = (window.scrollY / totalScroll) * 100;
+        setScrollProgress(currentProgress);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navLinks = [
     ["about", "About"],
     ["work", "Work"],
@@ -13,6 +28,12 @@ export default function Navbar({ activeSection }) {
 
   return (
     <header className="topbar">
+      {/* Scroll Progress Bar */}
+      <div
+        className="scroll-progress-bar"
+        style={{ width: `${scrollProgress}%` }}
+        aria-hidden="true"
+      />
       <div className="wrap nav">
         <a href="#top" className="wordmark" data-testid="link-home">
           <span className="wordmark-mark">EasyPeasySaral</span>
@@ -47,3 +68,4 @@ export default function Navbar({ activeSection }) {
     </header>
   );
 }
+

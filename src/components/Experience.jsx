@@ -6,18 +6,19 @@ export default function Experience() {
   return (
     <section id="experience" className="split-section">
       <div className="split-panel">
-        <Reveal>
+        <Reveal direction="left">
           <div className="eyebrow">Where I am now</div>
           <h2 className="section-title">Learning in<br />the real world.</h2>
-          <div className="timeline">
-            <div className="timeline-item">
+          <div className="timeline animated-timeline">
+            <div className="timeline-item interactive-timeline-item">
+              <div className="timeline-bullet-glow" />
               <div>
                 <h3>Backend & 6G Research Intern</h3>
-                <p>HNNOIX India Pvt Ltd &middot; Gurugram</p>
-                <ul style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: '1.6', margin: '15px 0 0 0', paddingLeft: '18px', listStyleType: 'disc', letterSpacing: '-0.01em' }}>
-                  <li style={{ marginBottom: '8px' }}>Developing backend services and data-processing pipelines for telecom research projects involving 5G and emerging 6G technologies.</li>
-                  <li style={{ marginBottom: '8px' }}>Working with ASN.1 message structures, protocol logs, and network datasets for parsing, analysis, and visualization.</li>
-                  <li style={{ marginBottom: '8px' }}>Building FastAPI backend components and React interfaces for telecom monitoring and analysis tools.</li>
+                <p className="timeline-org">HNNOIX India Pvt Ltd &middot; Gurugram</p>
+                <ul className="timeline-desc-list">
+                  <li>Developing backend services and data-processing pipelines for telecom research projects involving 5G and emerging 6G technologies.</li>
+                  <li>Working with ASN.1 message structures, protocol logs, and network datasets for parsing, analysis, and visualization.</li>
+                  <li>Building FastAPI backend components and React interfaces for telecom monitoring and analysis tools.</li>
                   <li>Collaborating with researchers on AI-assisted workflows and proof-of-concept applications for next-generation communication systems.</li>
                 </ul>
               </div>
@@ -29,37 +30,40 @@ export default function Experience() {
         </Reveal>
       </div>
       <div className="split-panel section-dark">
-        <Reveal delay="reveal-delay-2">
+        <Reveal delay="reveal-delay-2" direction="right">
           <div className="eyebrow">Foundation</div>
           <h2 className="section-title">Built on<br />strong basics.</h2>
-          <div className="education-card">
-            <h3>MITS Gwalior</h3>
-            <p>
-              B.Tech &middot; Computer Science & Engineering<br />
-              Artificial Intelligence & Machine Learning<br />
-              2023 &mdash; 2027
-            </p>
-            <span className="cgpa">CGPA 7.98</span>
-          </div>
-          <div className="education-card">
-            <h3>Paras Vidya Vihar, Sagar</h3>
-            <p>
-              Class 12<br />
-              2022 &mdash; 2023
-            </p>
-            <span className="cgpa">87%</span>
-          </div>
-          <div className="education-card">
-            <h3>Paras Vidya Vihar, Sagar</h3>
-            <p>
-              Class 10<br />
-              2021 &mdash; 2022
-            </p>
-            <span className="cgpa">84.2%</span>
+          <div className="education-cards">
+            <div className="education-card interactive-edu-card">
+              <h3>MITS Gwalior</h3>
+              <p>
+                B.Tech &middot; Computer Science & Engineering<br />
+                Artificial Intelligence & Machine Learning<br />
+                2023 &mdash; 2027
+              </p>
+              <span className="cgpa cgpa-glow">CGPA 7.98</span>
+            </div>
+            <div className="education-card interactive-edu-card">
+              <h3>Paras Vidya Vihar, Sagar</h3>
+              <p>
+                Class 12<br />
+                2022 &mdash; 2023
+              </p>
+              <span className="cgpa">87%</span>
+            </div>
+            <div className="education-card interactive-edu-card">
+              <h3>Paras Vidya Vihar, Sagar</h3>
+              <p>
+                Class 10<br />
+                2021 &mdash; 2022
+              </p>
+              <span className="cgpa">84.2%</span>
+            </div>
           </div>
         </Reveal>
       </div>
     </section>
   );
 }
+
 
