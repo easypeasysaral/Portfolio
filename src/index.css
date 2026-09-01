@@ -3804,36 +3804,13 @@ button {
   align-items: start;
   gap: 28px;
   padding: 31px 0;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: padding 0.3s, background 0.3s;
   display: grid;
-  position: relative;
-  border-radius: 4px;
-}
-.spotlight-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(
-    400px circle at var(--mouse-x, -1000px) var(--mouse-y, -1000px),
-    rgba(255, 255, 255, 0.45),
-    transparent 70%
-  );
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.3s;
-  border-radius: 4px;
-}
-.spotlight-card:hover::before {
-  opacity: 1;
 }
 .project-row:hover {
-  background: #d8f45a60;
-  padding-left: 18px;
-  padding-right: 18px;
-  transform: translateX(4px);
+  background: #d8f45a33;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 .project-index {
   color: #728052;

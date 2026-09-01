@@ -1,25 +1,10 @@
 
-import React, { useState } from "react";
+import React from "react";
 import Reveal from "./Reveal";
-import { ArrowUpRight, FolderGit2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { projects } from "../data";
 
 export default function Projects() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0, activeIndex: null });
-
-  const handleMouseMove = (e, index) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
-      activeIndex: index
-    });
-  };
-
-  const handleMouseLeave = () => {
-    setMousePos({ x: 0, y: 0, activeIndex: null });
-  };
-
   return (
     <section id="work" className="section projects-section">
       <div className="wrap">
@@ -38,21 +23,15 @@ export default function Projects() {
           {projects.map((p, idx) => (
             <Reveal key={p.index} delay={`reveal-delay-${idx + 1}`} direction="up">
               <article
-                className="project-row spotlight-card"
+                className="project-row"
                 data-testid={`card-project-${p.index}`}
-                onMouseMove={(e) => handleMouseMove(e, p.index)}
-                onMouseLeave={handleMouseLeave}
-                style={{
-                  "--mouse-x": mousePos.activeIndex === p.index ? `${mousePos.x}px` : "-1000px",
-                  "--mouse-y": mousePos.activeIndex === p.index ? `${mousePos.y}px` : "-1000px"
-                }}
               >
                 <div className="project-index">{p.index}</div>
                 <div className="project-main-content">
                   <h3 className="project-name">{p.name}</h3>
                   <p className="project-desc">{p.description}</p>
                   <div className="project-tags">
-                    {p.tags.map(t => <span key={t} className="project-tag interactive-tag">{t}</span>)}
+                    {p.tags.map(t => <span key={t} className="project-tag">{t}</span>)}
                   </div>
                 </div>
                 <div className="project-meta">
@@ -71,5 +50,6 @@ export default function Projects() {
     </section>
   );
 }
+
 
 
