@@ -28,10 +28,11 @@ export const projects = [
 
 export const skills = [
   { title: "Languages", items: ["Python", "C++", "SQL", "JavaScript"] },
-  { title: "ML / AI", items: ["Scikit-Learn", "XGBoost", "PyTorch", "CNNs", "NLP", "SHAP"] },
+  { title: "ML / AI", items: ["Scikit-Learn", "XGBoost", "PyTorch", "CNNs", "NLP","Transformers"] },
+  { title: "Data Engineering", items: ["Pandas", "NumPy", "Matplotlib", "Seaborn","Data Cleaning","Data Preprocessing","Feature Engineering"] },
   { title: "Generative AI", items: ["LangChain", "RAG", "HuggingFace", "ChromaDB", "Whisper"] },
-  { title: "Backend / web", items: ["FastAPI", "REST", "SQLAlchemy", "Pydantic", "React", "PostgreSQL"] },
-  { title: "Engineering", items: ["Git", "Docker", "Linux", "Pandas", "NumPy"] }
+  { title: "Backend / Frontend", items: ["FastAPI", "REST APIs", "SQLAlchemy", "Pydantic", "React", "PostgreSQL","Neon","SupaBase"] },
+  { title: "Engineering", items: ["Git", "Docker"] }
 ];
 
 export const signals = [
