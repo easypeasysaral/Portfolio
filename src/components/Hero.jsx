@@ -99,7 +99,7 @@ export default function Hero() {
                 <span>See selected work</span> <ArrowRight size={16} className="btn-icon" />
               </a>
               <a
-                href="https://drive.google.com/file/d/1UUJTwMLjbn4_VuyVDHpilHblCJa_VgcH/view?usp=sharing"
+                href="https://drive.google.com/file/d/1j7TWgJTVLmdfPPjDdJe7A3Tm9kEhLRFZ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="button-quiet magnetic-btn"
