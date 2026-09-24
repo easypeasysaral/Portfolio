@@ -14,7 +14,7 @@ export default function Experience() {
               <div className="timeline-bullet-glow" />
               <div>
                 <h3>Intern</h3>
-                <p className="timeline-org">Nova Techset Ltd</p>
+                <p className="timeline-org">Nova Techset Ltd &middot; Pune, Maharastra</p>
                 <ul className="timeline-desc-list">
                   <li>Contributing to projects and gaining hands-on experience as an intern.</li>
                 </ul>
@@ -27,7 +27,7 @@ export default function Experience() {
               <div className="timeline-bullet-glow" />
               <div>
                 <h3>Backend & 6G Research Intern</h3>
-                <p className="timeline-org">HNNOIX India Pvt Ltd &middot; Gurugram</p>
+                <p className="timeline-org">HNNOIX India Pvt Ltd &middot; Gurugram, Haryana</p>
                 <ul className="timeline-desc-list">
                   <li>Developing backend services and data-processing pipelines for telecom research projects involving 5G and emerging 6G technologies.</li>
                   <li>Working with ASN.1 message structures, protocol logs, and network datasets for parsing, analysis, and visualization.</li>
