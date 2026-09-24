@@ -16,14 +16,6 @@ export const projects = [
     proof: "English / Hindi / Hinglish",
     repo: "https://github.com/easypeasysaral/AI_Video_Assitant"
   },
-  {
-    index: "03",
-    name: "Hyperion IDS -- Deep Latent Space & Ensemble Network Defense",
-    description: "A network traffic classification system focused on the full ML loop: feature engineering, supervised model evaluation, and a usable serving layer.",
-    tags: ["Scikit-Learn", "FastAPI", "React", "Network security"],
-    proof: "Traffic classification",
-    repo: "https://github.com/easypeasysaral/Intrusion-Detection-System"
-  }
 ];
 
 export const skills = [
