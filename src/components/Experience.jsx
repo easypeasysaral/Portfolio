@@ -13,6 +13,19 @@ export default function Experience() {
             <div className="timeline-item interactive-timeline-item">
               <div className="timeline-bullet-glow" />
               <div>
+                <h3>Intern</h3>
+                <p className="timeline-org">Nova Techset Ltd</p>
+                <ul className="timeline-desc-list">
+                  <li>Contributing to projects and gaining hands-on experience as an intern.</li>
+                </ul>
+              </div>
+              <div className="timeline-date">
+                Sept 2026 &mdash;<br />Present
+              </div>
+            </div>
+            <div className="timeline-item interactive-timeline-item">
+              <div className="timeline-bullet-glow" />
+              <div>
                 <h3>Backend & 6G Research Intern</h3>
                 <p className="timeline-org">HNNOIX India Pvt Ltd &middot; Gurugram</p>
                 <ul className="timeline-desc-list">
@@ -23,7 +36,7 @@ export default function Experience() {
                 </ul>
               </div>
               <div className="timeline-date">
-                Jul 2026 &mdash;<br />Present
+                Aug 2026 &mdash;<br />Sept 2026
               </div>
             </div>
           </div>
